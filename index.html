@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css Animation</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- First Section -->
+    <section id="main-section">
+        <!-- Audio File -->
+        <audio src="./assets/audio/birds-sound.mp3" class="hidden" id="bird_sound"></audio>
+
+        <!-- Clouds Animation -->
+        <div id="background-wrap">
+            <div class="x1">
+                <div class="cloud"></div>
+            </div>
+            <div class="x2">
+                <div class="cloud"></div>
+            </div>
+            <div class="x3">
+                <div class="cloud"></div>
+            </div>
+            <div class="x4">
+                <div class="cloud"></div>
+            </div>
+            <div class="x5">
+                <div class="cloud"></div>
+            </div>
+            <div class="x6">
+                <div class="cloud"></div>
+            </div>
+            <div class="x7">
+                <div class="cloud"></div>
+            </div>
+            <div class="x8">
+                <div class="cloud"></div>
+            </div>
+            <div class="x8">
+                <div class="cloud"></div>
+            </div>
+            <div class="x9">
+                <div class="cloud"></div>
+            </div>
+            <div class="x10">
+                <div class="cloud"></div>
+            </div>
+            <div class="x11">
+                <div class="cloud"></div>
+            </div>
+            <div class="x12">
+                <div class="cloud"></div>
+            </div>
+        </div>
+
+        <!-- Bird Animation -->
+        <div class="container">
+
+            <div class="bird-container bird-container--one">
+                <div class="bird bird--one"></div>
+            </div>
+
+            <div class="bird-container bird-container--two">
+                <div class="bird bird--two"></div>
+            </div>
+
+            <div class="bird-container bird-container--three">
+                <div class="bird bird--three"></div>
+            </div>
+
+            <div class="bird-container bird-container--four">
+                <div class="bird bird--four"></div>
+            </div>
+
+            <div class="bird-container bird-container--five">
+                <div class="bird bird--five"></div>
+            </div>
+
+            <div class="bird-container bird-container--six">
+                <div class="bird bird--six"></div>
+            </div>
+
+            <div class="bird-container bird-container--seven">
+                <div class="bird bird--seven"></div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Second Section -->
+    <section id="car-on-road">
+        <audio src="./assets/audio/car-sound.mp3" class="hidden" id="car_sound"></audio>
+        <div class="moon"></div>
+
+        <div class="skyline">
+            <div class="building1-shadow"></div>
+            <div class="building1">
+
+                <div class="building-left-half"></div>
+                <div class="building-right-half"></div>
+            </div>
+        </div>
+        <div class="road">
+            <div class="road-top-half"></div>
+            <div class="road-bottom-half"></div>
+        </div>
+        <div class="body">
+            <div class="car">
+                <div class="carbody"></div>
+                <div class="weel weel1"></div>
+                <div class="weel weel2"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section -->
+    <section id="footpath">
+        <div id="runner"></div>
+    </section>
+
+
+    <!-- Script Section -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+    <script>
+        var audio = document.getElementById('bird_sound');
+        var main = document.getElementById('main_section');
+        var car = document.getElementById('car_sound');
+        var car_section = document.getElementById('car-on-road');
+        var footpath = document.getElementById('foopath');
+        window.onload = function () {
+            audio.play();
+        }
+
+        window.onscroll = function () {
+            if (main === true) {
+                audio.play();
+                car.pause();
+            }
+        }
+
+        window.onscroll = function () {
+            if (car_section) {
+                audio.pause();
+                car.play();
+            };
+        }
+    </script>
+</body>
+
+</html>
